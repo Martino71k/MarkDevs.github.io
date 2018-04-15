@@ -4,9 +4,9 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
 	<title>Mark & Devs</title>
-	<link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
   <link rel="stylesheet" href="css/style.css">
 	<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+	<link rel="icon" href="img/favicon.ico" type="image/x-icon">
 </head>
 <body class="page">
 		<div class="loader">
@@ -77,7 +77,7 @@
 					</div>
 					<div id="arrow-right" class="arrow"></div>
 				</div>
-          <button class="work__arrow work__arrow--back" id="btn-back">
+          <!--Arrows not working <button class="work__arrow work__arrow--back" id="btn-back">
           <span class="visually-hidden">Назад</span>
           <svg class="work__arrow-svg work__arrow-svg--back" width="47px" height="50px" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0px" y="0px" viewBox="0 0 492 492" style="enable-background:new 0 0 492 492;" xml:space="preserve">
             <g>
@@ -92,15 +92,15 @@
               <path d="M382.678,226.804L163.73,7.86C158.666,2.792,151.906,0,144.698,0s-13.968,2.792-19.032,7.86l-16.124,16.12    c-10.492,10.504-10.492,27.576,0,38.064L293.398,245.9l-184.06,184.06c-5.064,5.068-7.86,11.824-7.86,19.028    c0,7.212,2.796,13.968,7.86,19.04l16.124,16.116c5.068,5.068,11.824,7.86,19.032,7.86s13.968-2.792,19.032-7.86L382.678,265    c5.076-5.084,7.864-11.872,7.848-19.088C390.542,238.668,387.754,231.884,382.678,226.804z" style="fill: rgb(255, 255, 255);"></path>
             </g>
           </svg>
-        </button>
+        </button> -->
         </div>
-        <div class="work__toggles slider__toggles">
+        <!--Slider toggles not working <div class="work__toggles slider__toggles">
           <span class="slider__toggle slider__toggle--active"></span>
           <span class="slider__toggle"></span>
           <span class="slider__toggle"></span>
-        </div>
+        </div> -->
         <a class="work__btn" href="#order">Напишите мне!</a>
-      </section></div>
+			</section></div>
     
   
   <div class="s2">
@@ -176,8 +176,8 @@
       <h1 class="works__title">Мои последние работы</h1>
       <div class="works__wrapper">
         <ul class="works__list">
-          <li class="works__item">
-            <a href="https://github.com/Martino71k/236048-sedona" class="work__link">
+          <li class="works__item modal-open">
+            <!-- <a href="https://github.com/Martino71k/236048-sedona" class="work__link"> -->
               <div class="works__bar">
                 <div class="works__bar-i"></div>
               </div>
@@ -186,10 +186,10 @@
                 <li>CSS3</li>
               </ul>
               <img class="works__img" src="img/sed.jpg" alt="Сайт">
-            </a>
+            
           </li>
-          <li class="works__item">
-            <a href="https://github.com/Martino71k/236048-pink" class="work__link">
+          <li class="works__item modal-open">
+            <!-- <a href="https://github.com/Martino71k/236048-pink" class="work__link"> -->
               <div class="works__bar">
                 <div class="works__bar-i"></div>
               </div>
@@ -200,10 +200,10 @@
                 <li>Gulp</li>
               </ul>
               <img class="works__img" src="img/pink.jpg" alt="Сайт">
-            </a>
+            
           </li>
-          <li class="works__item">
-            <a href="https://github.com/Martino71k/Mark-Devs" class="work__link">
+          <li class="works__item modal-open">
+            <!-- <a href="https://github.com/Martino71k/Mark-Devs" class="work__link"> -->
               <div class="works__bar">
                 <div class="works__bar-i"></div>
               </div>
@@ -215,7 +215,7 @@
                 <li>Design</li>
               </ul>
               <img class="works__img" src="img/markdevs1.png" alt="Сайт">
-            </a>
+            
           </li>
           <li class="works__item">
             <a href="#" class="work__link">
@@ -227,7 +227,7 @@
               </ul>
             </a>
           </li>
-        </ul>
+				</ul>
       </div>
     </section>
     <section class="about" id="about">
@@ -435,12 +435,29 @@
 		</div>
 		<div class="page-footer__copyright">Icons made by <a href="http://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>
 		<div class="modal">
-				<div class="modal__wrapper">
-					<p class="modal__text">Сообщение успешно отправлено!</p>
-					<button class="modal__btn">ОК</button>
-				</div>
+			<div class="modal__wrapper">
+				<p class="modal__text">Сообщение успешно отправлено!</p>
+				<button class="modal__btn">ОК</button>
 			</div>
+		</div>
 	</footer>
+	<div class="modal-works">
+			<div class="modal-works__content modal-works__content--sedona">
+				<h3 class="modal-works__title">Sedona</h3>
+				<p>Sedona - туристический город в штате Аризона. Это мой первый проект. Он сделан на базовом html и css, немного js и красивый сайт готов к работе.</p>
+				<img class="modal-works__img" src="img/sed.jpg" alt="Сайт">
+			</div>
+			<div class="modal-works__content modal-works__content--pink">
+					<h3 class="modal-works__title">Pink</h3>
+					<p>Pink - фото сервис, в котором люди обмениваются фото, редактируют их.</p>
+					<img class="modal-works__img" src="img/pink.jpg" alt="Сайт">
+				</div>
+				<div class="modal-works__content modal-works__content--markdevs">
+						<h3 class="modal-works__title">Mark & Devs</h3>
+						<p>Мой собственный сайт. Вы на нем находитесь в данный момент.</p>
+						<img class="modal-works__img" src="img/markdevs1.png" alt="Сайт">
+					</div>
+		</div>
 	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
 	<script src="js/script.js"></script>
 </body>

@@ -163,67 +163,49 @@ arrowRight.addEventListener("click", function() {
 startSlide();
 
 
-// Form
-
-// Отправка заявки 
-$(document).ready(function() {
-	$('#order').submit(function() { // проверка на пустоту заполненных полей. Атрибут html5 — required не подходит (не поддерживается Safari)
-		if (document.form.name.value == '' || document.form.email.value == '' ) {
-			valid = false;
-			return valid;
-		}
-		$.ajax({
-			type: "POST",
-			url: "/php/mail.php",
-			data: $(this).serialize()
-		}).done(function() {
-			$('.modal').fadeIn();
-			$(this).find('input').val('');
-			$('#order').trigger('reset');
-		});
-		return false;
-	});
-});
-
-// Закрыть попап «спасибо»
-$('.modal__btn').click(function() { // по клику на крестик
-	$('.modal').fadeOut();
-});
-
-$(document).mouseup(function (e) { // по клику вне попапа
-	var popup = $('.popup');
-	if (e.target!=popup[0]&&popup.has(e.target).length === 0){
-		$('.modal').fadeOut();
-	}
-});
-
-// Маска ввода номера телефона (плагин maskedinput)
-$(function($){
-	$('[name="phone"]').mask("+7(999) 999-9999");
-});
 
 
 
-// // Кнопка «Наверх/Вниз»
-// var lastScrollPosition = 0; 
+// // Form
 
-// $('#scroll-up').click( function(){
-// 	if ( $(document).scrollTop() > 0 ) {
-// 		$('body').animate({scrollTop:0},1000);
-// 		lastScrollPosition = $(document).scrollTop();
-// 	} else {
-// 		$('body').animate({scrollTop:lastScrollPosition},1000);
-// 	}	
+// // Отправка заявки 
+// $(document).ready(function() {
+// 	$('#order').submit(function() { // проверка на пустоту заполненных полей. Атрибут html5 — required не подходит (не поддерживается Safari)
+// 		if (document.form.name.value == '' || document.form.email.value == '' ) {
+// 			valid = false;
+// 			return valid;
+// 		}
+// 		$.ajax({
+// 			type: "POST",
+// 			url: "/php/mail.php",
+// 			data: $(this).serialize()
+// 		}).done(function() {
+// 			$('.modal').fadeIn();
+// 			$(this).find('input').val('');
+// 			$('#order').trigger('reset');
+// 		});
+// 		return false;
+// 	});
 // });
 
-// $(document).scroll( function() {
-// 	if ( $(document).scrollTop() > 0 ) {
-// 		$('#scroll-up').fadeIn();
-// 		$('#scroll-up').text('Наверх');
-// 	} else {
-// 		$('#scroll-up').text('Вниз');
+// // Закрыть попап «спасибо»
+// $('.modal__btn').click(function() { // по клику на крестик
+// 	$('.modal').fadeOut();
+// });
+
+// $(document).mouseup(function (e) { // по клику вне попапа
+// 	var popup = $('.popup');
+// 	if (e.target!=popup[0]&&popup.has(e.target).length === 0){
+// 		$('.modal').fadeOut();
 // 	}
 // });
+
+// // Маска ввода номера телефона (плагин maskedinput)
+// $(function($){
+// 	$('[name="phone"]').mask("+7(999) 999-9999");
+// });
+
+
 
 /* Preloader */ 
 $(window).load(function() {
@@ -232,5 +214,46 @@ $(window).load(function() {
   }, 2000);  
 });
 
-// Header change while sroll
 
+
+
+// // Header change while sroll
+
+// var header = document.querySelector('.page-header');
+
+// var headerChange = function(e) {
+// 	if (window.pageYOffset > 5) {
+// 		header.classList.add('page-header--scroll');
+// 	} 
+// 	else {
+// 		header.classList.add('page-header');
+// 	}
+// };
+
+// (function () {
+// 	if(window.addEventListener('scroll', headerChange));
+// })();
+
+
+// Modal works
+
+$('body').on('click', '.modal-open', function(e) {
+    
+	$('.modal-works, .modal-works__content').show();
+	e.preventDefault();
+});
+
+$(document).click(function(e) {
+  //if you click on anything except the modal itself or the "open modal" link, close the modal
+  if (!$(event.target).closest(".modal-works").length) {
+    $("body").remove(".modal-works");
+  }
+});
+
+var modal = document.querySelector('.modal-works');
+
+window.onclick = function(event) {
+	if (event.target == modal) {
+			modal.style.display = "none";
+	}
+}
