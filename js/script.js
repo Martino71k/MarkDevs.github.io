@@ -283,6 +283,13 @@ window.onclick = function(event) {
 	}
 }
 
+window.onclick = function(event) {
+  var isModal = (' ' + event.target.className + ' ').indexOf(' modal-works ') > -1;
+  if (isModal) {
+    event.target.style.display = "none";
+  }
+}
+
 
 // for (var i = 0; i < modal.length; i++) {
 // 	var modalClose = modal[i];
